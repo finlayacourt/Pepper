@@ -1,0 +1,13 @@
+[dev]
+	command = "npm run start"
+	framework = "#custom"
+	targetPort = 5000
+
+[build]
+	publish = "dist"
+	command = "npm run build:dom"
+
+[[headers]]
+	for = "/components/*"
+	[headers.values]
+		cache-control = "public, max-age=31536000, immutable"

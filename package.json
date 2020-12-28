@@ -1,0 +1,43 @@
+{
+  "name": "pepper",
+  "version": "1.0.0",
+  "description": "Svelte Framework & SSG with partial hydration",
+  "scripts": {
+    "build:dom": "rm -rf dist/components; rollup -c rollup.config.dom.js",
+    "build:ssr": "rm -rf dist; rollup -c rollup.config.ssr.js",
+    "start": "sirv dist",
+    "dev:dom": "rollup -w -c rollup.config.dom.js",
+    "dev:ssr": "rollup -w -c rollup.config.ssr.js"
+  },
+  "author": "Finlay A’Court",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "node-fetch": "^2.6.1",
+    "postcss": "^8.2.1",
+    "rollup": "^2.35.1",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-html-minifier": "^1.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-multi-input": "^1.2.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.31.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-modules-systemjs": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/runtime": "^7.12.5",
+    "regenerator-runtime": "^0.13.7",
+    "sirv-cli": "^1.0.10"
+  }
+}
